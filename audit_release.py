@@ -20,7 +20,7 @@ def files(root=ROOT):
             raise ValueError('unsafe_release_path')
         if any(part in DENIED_DIRS for part in p.parts) or p.name=='collector-config.json':
             raise ValueError('runtime_file_in_manifest')
-        if p.suffix not in SUFFIXES and name!='.gitignore':raise ValueError('unsupported_release_type')
+        if p.suffix not in SUFFIXES and name not in {'.gitignore','LICENSE'}:raise ValueError('unsupported_release_type')
         path=root/name
         if path.is_symlink() or not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
             raise ValueError('missing_or_external_release_file')
