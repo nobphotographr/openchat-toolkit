@@ -1,0 +1,23 @@
+# Runtime data is private, regardless of repository visibility.
+state/
+collector-config.json
+.venv/
+__pycache__/
+*.py[cod]
+*.exe
+*.dll
+*.sqlite*
+*.db
+*.log
+*.jsonl
+*.lock
+*.tmp
+*.zip
+.env
+.env.*
+*-service-account.json
+*credentials*.json
+test-output/
+evidence/
+dist/
+.demo/

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "interval_seconds": 86400,
+  "daily_schedule": {
+    "timezone": "Asia/Tokyo",
+    "time": "03:00",
+    "window_minutes": 60
+  },
+  "rooms": []
+}
